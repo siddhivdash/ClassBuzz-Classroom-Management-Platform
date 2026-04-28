@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 5% 98%;
+    --foreground: 240 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 94%;
+    --secondary-foreground: 240 10% 20%;
+
+    --muted: 240 5% 94%;
+    --muted-foreground: 240 5% 46%;
+
+    --accent: 43 96% 56%;
+    --accent-foreground: 43 96% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 239 84% 67%;
+
+    --radius: 0.75rem;
+
+    /* ClassBuzz semantic tokens */
+    --announcement: 239 84% 67%;
+    --announcement-light: 239 84% 96%;
+    --poll: 280 65% 60%;
+    --poll-light: 280 65% 95%;
+    --doubt: 43 96% 56%;
+    --doubt-light: 43 96% 93%;
+    --reminder: 0 72% 55%;
+    --reminder-light: 0 72% 95%;
+    --badge: 160 84% 39%;
+    --badge-light: 160 84% 93%;
+    --feedback: 200 70% 50%;
+    --feedback-light: 200 70% 95%;
+    --resource: 330 65% 55%;
+    --resource-light: 330 65% 95%;
+
+    --sidebar-background: 240 5% 97%;
+    --sidebar-foreground: 240 10% 25%;
+    --sidebar-primary: 239 84% 67%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 239 60% 95%;
+    --sidebar-accent-foreground: 239 84% 50%;
+    --sidebar-border: 240 6% 90%;
+    --sidebar-ring: 239 84% 67%;
+
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .dark {
+    --background: 240 10% 6%;
+    --foreground: 240 5% 95%;
+
+    --card: 240 10% 9%;
+    --card-foreground: 240 5% 95%;
+
+    --popover: 240 10% 9%;
+    --popover-foreground: 240 5% 95%;
+
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 10% 14%;
+    --secondary-foreground: 240 5% 90%;
+
+    --muted: 240 10% 14%;
+    --muted-foreground: 240 5% 55%;
+
+    --accent: 43 96% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 240 10% 16%;
+    --input: 240 10% 16%;
+    --ring: 239 84% 67%;
+
+    --sidebar-background: 240 10% 7%;
+    --sidebar-foreground: 240 5% 90%;
+    --sidebar-primary: 239 84% 67%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 14%;
+    --sidebar-accent-foreground: 239 60% 75%;
+    --sidebar-border: 240 10% 14%;
+    --sidebar-ring: 239 84% 67%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/80 backdrop-blur-md border border-border/50;
+  }
+
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-md hover:-translate-y-0.5;
+  }
+
+  .type-announcement { @apply border-l-4; border-left-color: hsl(var(--announcement)); }
+  .type-poll { @apply border-l-4; border-left-color: hsl(var(--poll)); }
+  .type-doubt { @apply border-l-4; border-left-color: hsl(var(--doubt)); }
+  .type-reminder { @apply border-l-4; border-left-color: hsl(var(--reminder)); }
+  .type-badge { @apply border-l-4; border-left-color: hsl(var(--badge)); }
+  .type-feedback { @apply border-l-4; border-left-color: hsl(var(--feedback)); }
+  .type-resource { @apply border-l-4; border-left-color: hsl(var(--resource)); }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.08) 0%, hsl(var(--accent) / 0.06) 50%, hsl(var(--success) / 0.05) 100%);
+  }
+}
