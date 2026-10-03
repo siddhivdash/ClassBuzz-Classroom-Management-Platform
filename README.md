@@ -188,6 +188,6 @@ Contributions are welcome!
 **Siddhi Dash**  
 GitHub: [@siddhivdash](https://github.com/siddhivdash)
 
-## ⭐ Show Your Support
+
 
 If you found this project useful, please consider giving it a star on GitHub!
